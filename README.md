@@ -2,10 +2,24 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+official plugin available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+| Feature                   | `tsc` (TypeScript Compiler) | Babel                        | SWC                          | esbuild                     | tsup / vite / rollup          |
+|---------------------------|------------------------------|------------------------------|------------------------------|------------------------------|-------------------------------|
+| **Written In**            | TypeScript (JS)              | JavaScript                   | Rust (super fast)            | Go (super fast)              | Depends (uses esbuild or swc) |
+| **Speed**                 | 🐢 Slow                      | 🐢 Slow (faster with cache)  | 🚀 Very fast                  | 🚀 Very fast                  | 🚀 Very fast                   |
+| **Type Checking**         | ✅ Yes                       | ❌ No                         | ❌ No (transpile only)        | ❌ No                         | ❌ No                          |
+| **Transpilation (TS → JS)** | ✅ Yes                      | ✅ Yes (via plugin)           | ✅ Yes (core feature)         | ✅ Yes                        | ✅ Yes                         |
+| **Tree Shaking**          | ❌ No                        | ✅ Partial (via bundler)     | ✅ Yes (if bundling)          | ✅ Yes                        | ✅ Yes                         |
+| **JSX Support**           | ✅ (with config)             | ✅                            | ✅ (React, Next.js, etc.)     | ✅                           | ✅                            |
+| **Config Complexity**     | 😵‍💫 Moderate               | 😵‍💫 Moderate               | 😎 Simple                    | 😎 Simple                    | 😎 Simple                     |
+| **Use in Production**     | ✅ Yes                       | ✅ Yes                        | ✅ Yes (Next.js, Turbopack)   | ✅ Yes                        | ✅ Yes                         |
+| **Bundle Capabilities**   | ❌ No                        | ❌ No                         | ✅ Yes (with swc-cli/spack)   | ✅ Yes                        | ✅ Yes                         |
+
 
 ## Expanding the ESLint configuration
 

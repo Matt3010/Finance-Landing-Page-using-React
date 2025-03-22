@@ -18,8 +18,8 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
           ))}
-          <a href="https://github.com/Technical-Shubham-tech/bank-modern-app" target="_blank" rel="noreferrer">
-            <Button text="Source Code" styles="py-3 px-3 text-[16px]" />
+          <a href="#" target="_blank" rel="noreferrer">
+            <Button text="Get Fit" styles="py-3 px-3 text-[16px]" />
           </a>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
