@@ -1,28 +1,20 @@
-import { card } from "../assets";
-import styles, { layout } from "../styles";
-import Button from "./Button";
+import {card} from "../assets";
+import Button from "./Button.tsx";
 
 const CardDeal = () => (
-  <section className={layout.section}>
-    {/* Card Deal Info */}
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        Find a better card deal
-        <br className="sm:block hidden" /> in few easy steps.
-      </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis
-        aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
-      </p>
-      {/* Get Started */}
-      <Button styles="mt-10" />
-    </div>
-
-    {/* Background Image */}
-    <div className={layout.sectionImg}>
-      <img src={card} alt="Card Deal" className="w-[100%] h-[100%]" />
-    </div>
-  </section>
+    <section className="flex md:flex-row flex-col sm:py-16 py-6">
+        <div className="flex-1 flex justify-center items-start flex-col">
+            <h2 className="font-poppins font-semibold text-[40px] text-white leading-[66.8px] w-full xs:text-[48px] xs:leading-[76.8px]">
+                Find a better card deal<br className="sm:block hidden" /> in few easy steps.
+            </h2>
+            <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5">
+                Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
+            </p>
+            <Button styles="mt-10" />
+        </div>
+        <div className="flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
+            <img src={card} alt="Card Deal" className="w-full h-full" />
+        </div>
+    </section>
 );
-
 export default CardDeal;
